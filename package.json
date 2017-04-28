@@ -1,0 +1,28 @@
+{
+  "name": "vpclub-ui",
+  "version": "0.0.1",
+  "description": "vpclub-ui",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/a1029563229/vpclub-ui.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "vp_litao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a1029563229/vpclub-ui/issues"
+  },
+  "homepage": "https://github.com/a1029563229/vpclub-ui#readme",
+  "dependencies": {
+    "animate.css": "3.5.2",
+    "less": "2.7.2",
+    "less-loader": "4.0.3",
+    "rxjs": "5.3.0"
+  }
+}

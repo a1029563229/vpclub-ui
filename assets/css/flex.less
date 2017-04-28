@@ -1,0 +1,210 @@
+@px:1px;
+@yh:'Microsoft JhengHei UI Light';
+
+.flex{
+  display: flex;
+  display: -webkit-flex;
+}
+.flex-auto{
+  .flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-right{
+  .flex;
+  flex-wrap:wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.flex-left{
+  .flex;
+  flex-wrap:wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.flex-between{
+  .flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-column{
+  .flex;
+  flex-wrap:wrap;
+  flex-direction:column;
+}
+.img-response{
+  img{
+    width:100%;
+    height:auto;
+  }
+}
+
+.lt-round{
+  background:rgba(255,255,255,0.00);
+  border:1px solid rgba(255,255,255,0.50);
+  border-radius:100px;
+  padding: 5px 20px;
+}
+
+
+.back-icon{
+  border:1px solid #fff;
+  background: rgba(255,84,0,0.30);
+  padding: 1px;
+  font-size:12px;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+}
+
+.box-sizing{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.translate{
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.bor(@radius:100%){
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+  border-radius:@radius;
+}
+
+.menu-active{
+  border:1px solid #ffffff!important;
+  box-shadow:0 0 4px 2px #00beff;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  border-radius:4px;
+}
+
+.money-title{
+  font-weight:bold;
+  margin-top:10 * @px;
+  span{
+    font-size:@px * 48;
+  }
+}
+
+.progress-bar{
+  position: relative;
+  width: 100px;
+  height:10px;
+  background: rgba(255,255,255,.2);
+  border-radius:100px;
+  overflow: hidden;
+  div:first-child{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height:100%;
+    background-image:linear-gradient(-180deg, #fbca61 0%, #f7721c 100%);
+    //border-radius:100px;
+  }
+}
+
+.lt-btn{
+  padding: 18 * @px 127 * @px;
+  .bor(5px);
+  border:1px solid #fff;
+  text-align: center;
+  font-size:24px;
+}
+
+.lt-br(@pt:18 * @px;@pl:18 * @px){
+  padding: @pt @pl;
+  .bor(5px);
+  border:1px solid #fff;
+  text-align: center;
+  font-size:24px;
+}
+
+.lt-bottom{
+  position: absolute;
+  bottom:0;
+  background: rgba(0,0,0,.4);
+  padding: 20 * @px;
+  width:100%;
+  .box-sizing;
+}
+
+.lt-title{
+  font-size:24 * @px;
+  font-weight:bold;
+}
+
+.mb10{
+  margin-bottom: 10px;
+}
+
+.mt10{
+  margin-top: 10px;
+}
+
+.menu-leaveout{
+  border:1px solid transparent;
+  box-shadow:none;
+}
+
+.btn-leaveout{
+  border:1px solid #fff;
+  box-shadow:none;
+}
+
+.buy-active{
+  background-image:linear-gradient(45deg, #f51a69 0%, #fd783e 100%);
+}
+
+.buy-leave{
+  background: transparent;
+}
+
+.vp-mb{
+    background-color:rgba(0,0,0,.5);
+    width: 100%;
+    height:100%;
+    position: fixed;
+    left:0;
+    top:0;
+    display:table;
+    text-align: center;
+    z-index: 998;
+    &-white{
+      background-color: rgba(255,255,255,.8) ;
+    }
+}
+
+.vp-btn{
+  margin: 6px 6px 0;
+  padding: 5px 15px;
+  border: 1px solid #dedede;
+  background-color: #f1f1f1;
+  color: #333;
+  border-radius: 2px;
+  font-weight: 400;
+  cursor: pointer;
+  &-primary {
+    border-color: #4898d5;
+    background-color: #2e8ded;
+    color: #fff
+  }
+  &-default {
+    border: 1px solid #dedede;
+    background-color: #f1f1f1;
+    color: #333;
+  }
+}
+
+button{
+  font-family:'Microsoft YaHei UI';
+}
