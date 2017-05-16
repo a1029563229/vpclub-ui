@@ -15,11 +15,14 @@ alert.install = function (Vue, options) {
     }
 
     let subject = new BehaviorSubject(0);
+    // subject.next(true);
  
     function vpAlert( content = '', title = '提示', type = opt.type) {
-        if (document.getElementsByClassName('vp-mb').length) {
+        if (document.getElementsByClassName('vp-mb-alert').length) {
             return;
         }
+
+        console.log(true);
         let toastTpl = Vue.extend(VpAlert);
         let tpl = new toastTpl(({
             propsData: { title, content, type }
@@ -30,22 +33,25 @@ alert.install = function (Vue, options) {
             .filter(val => val !== 0)
             .take(1)
             .subscribe(val => {
+                console.log(val);
                 subject.next(0);
                 resolve(val);
             });
         })
     };
     
-    Vue.prototype.$alert = (content = '', title = '提示', type = opt.type) => {
-        return vpAlert(content, title, 'alert');
+    Vue.prototype.$alert = async (content = '', title = '提示', type = opt.type) => {
+        let alertPlugins = await vpAlert(content, title, 'alert');
+        return alertPlugins;
     }
 
-    Vue.prototype.$alert.confirm =  (content = '', title = '提示', type = opt.type) => {
-        return vpAlert(content, title, 'confirm');
+    Vue.prototype.$alert.confirm = async (content = '', title = '提示', type = opt.type) => {
+        let alertPlugins = await vpAlert(content, title, 'confirm');
+        return alertPlugins;
     }
 
     Vue.prototype.$alert.close = (type = '') => {
-        let vpMb = vp('.vp-mb');
+        let vpMb = vp('.vp-mb-alert');
         let vpAlert = vp('.vp-alert');
         let close$ = Observable
             .interval(150)

@@ -1,5 +1,5 @@
 <template>
-    <div class="vp-mb animated fadeIn">
+    <div class="vp-mb-alert animated fadeIn">
         <div class="vp-alert vp-alert-center animated zoomIn">
             <div class="vp-alert-title">
                 <span>{{title}}</span>
@@ -37,13 +37,6 @@
     @import '../../../assets/css/flex';
     .animated{
         animation-duration:.3s;
-    }
-    .vp-mb::after{
-        display: inline-block;
-        vertical-align: middle;
-        width: 0;
-        height: 100%;
-        content:'';
     }
     .vp-alert{
         font-family: '微软雅黑';

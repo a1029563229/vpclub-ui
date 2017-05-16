@@ -31,7 +31,7 @@
 </script>
 
 <style scoped lang="less">
-@import '../../../assets/css/flex';
+@import '../../../assets/css/flex.less';
   .spinner {
     width: 40px;
     height: 40px;

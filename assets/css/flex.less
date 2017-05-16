@@ -1,6 +1,17 @@
 @px:1px;
 @yh:'Microsoft JhengHei UI Light';
 
+body,div {
+  font-family:@yh;
+}
+
+input{
+  background:none;
+  outline:none;
+  border:0;
+  font-family:@yh;
+}
+
 .flex{
   display: flex;
   display: -webkit-flex;
@@ -168,9 +179,10 @@
 .buy-leave{
   background: transparent;
 }
-
-.vp-mb{
+.vp-mb,.vp-mb-alert{
     background-color:rgba(0,0,0,.5);
+    background-size: cover;
+    overflow: hidden;
     width: 100%;
     height:100%;
     position: fixed;
@@ -182,6 +194,14 @@
     &-white{
       background-color: rgba(255,255,255,.8) ;
     }
+}
+
+.vp-mb::after,.vp-mb-alert::after{
+    content:'';
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
 }
 
 .vp-btn{
@@ -203,8 +223,28 @@
     background-color: #f1f1f1;
     color: #333;
   }
+  &-black{
+    background: #747077;
+    border-radius: 3px;
+    color: #fff;
+    border:1px solid #747077;
+  }
+  &-purple{
+    background: #602C88;
+    border-radius: 3px;
+    color: #fff;
+    border:1px solid #747077;
+  }
 }
 
 button{
   font-family:'Microsoft YaHei UI';
+}
+
+.vp-back-img{
+  position: fixed;
+  left:0;
+  top:0;
+  width: 100%;
+  height:auto;
 }
