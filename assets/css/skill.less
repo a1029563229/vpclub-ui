@@ -1,0 +1,53 @@
+.gradient-circle {
+    border-radius: 100%;
+    background: rgba(0,0,0,1);
+    box-shadow: 0 0 0 10px rgba(0,0,0,.6),
+        0 0 0 20px rgba(0,0,0,.3)
+}
+
+.stroke {
+    background: yellowgreen;
+    outline: 1px dashed #fff;
+    outline-offset: -10px;
+}
+
+.gap {
+    border-radius: 10px;
+    background: yellowgreen;
+    outline: 5px solid deeppink;
+}
+
+.border-fillet {
+    background: tan;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 0 4px #655;
+    outline: 8px solid #655;
+}
+
+.vertical-stripes {
+    background: linear-gradient(to right, /* 或 90deg */
+    #fb3 50%, #58a 0);
+    background-size: 30px 100%;
+}
+
+.ramps {
+    background: linear-gradient(#fb3 30%, #58a 30%);
+    background-size: 100% 30px;
+}
+
+.oblique-stripes {
+    background: linear-gradient(45deg,
+    #fb3 25%, #58a 0, #58a 50%,
+    #fb3 0, #fb3 75%, #58a 0);
+    background-size: 30px 30px;
+}
+
+.grid {
+    background: white;
+    background-image: linear-gradient(90deg,
+    rgba(200,0,0,.5) 50%, transparent 0),
+    linear-gradient(
+    rgba(200,0,0,.5) 50%, transparent 0);
+    background-size: 30px 30px;
+}

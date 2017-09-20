@@ -1,14 +1,14 @@
 <template>
     <div class="input-container">
         <input
-                id="input"
+                :id="name"
                 class="input-white"
                 :class="className"
                 :type="type"
                 :placeholder="placeholder"
                 :value="value"
                 @input="updateValue($event.target.value)">
-        <label for="input">{{placeholder}}</label>
+        <label :for="name">{{placeholder}}</label>
         <div class="bottom-line"></div>
     </div>
 </template>

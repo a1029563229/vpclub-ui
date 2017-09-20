@@ -47,10 +47,11 @@ FormControl.prototype.getValid = function () {
         delete this.prompt;
         return;
     }
+    const len = this.validators.validators.length;
     this.validators.validators.forEach(validator => {
-        if (validator == null) {
+        if (validator == null && len == 1) {
             this.isvalid = this.value !== '' ? true : false;
-        } else {
+        } else if (validator != null && len > 1){
             this.isvalid = validator.test(this.value) ? true : false;
         }
         if (this.isvalid) {
